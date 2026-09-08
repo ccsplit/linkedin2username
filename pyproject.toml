@@ -1,21 +1,14 @@
 [project]
 name = "linkedin2username"
-version = "0.1.0"
-description = ""
-authors = [
-    {name = "ccsplit",email = "cshay237@gmail.com"}
-]
-readme = "README.md"
-requires-python = ">=3.13"
+version = "0.30"
+requires-python = ">=3.10"
 dependencies = [
-    "selenium (>=4.35.0,<5.0.0)",
-    "requests (>=2.32.5,<3.0.0)"
+    "requests>=2.34.2",
+    "selenium>=4.44.0",
+    "urllib3>=2.7.0",
 ]
 
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
-package-mode = false
+[dependency-groups]
+dev = [
+    "pytest",
+]
